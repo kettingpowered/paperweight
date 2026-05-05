@@ -93,9 +93,19 @@ val shadowJar by tasks.existing(ShadowJar::class) {
 
 publishing {
     repositories {
-        maven("https://repo.papermc.io/repository/maven-snapshots/") {
-            credentials(PasswordCredentials::class)
-            name = "paper"
+        maven("https://repo.kettingpowered.org/Ketting-Forks/") {
+            name = "Ketting"
+            credentials {
+                username = System.getenv("KETTINGUSERNAME")
+                password = System.getenv("KETTINGPASSWORD")
+            }
+        }
+        maven("https://reposilite.c0d3m4513r.com/Ketting-Forks/") {
+            name = "Ketting-Backup"
+            credentials {
+                username = System.getenv("KETTINGUSERNAME")
+                password = System.getenv("KETTINGPASSWORD")
+            }
         }
     }
 
