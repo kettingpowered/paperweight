@@ -36,10 +36,11 @@ repositories {
     }
     maven("https://repo.papermc.io/repository/maven-public/") {
         mavenContent {
-            includeGroup("codechicken")
+            includeGroup("io.codechicken")
             includeGroup("net.fabricmc")
         }
     }
+    maven("https://repo.kettingpowered.org/Ketting-Forks/")
     mavenCentral()
     gradlePluginPortal()
 }
